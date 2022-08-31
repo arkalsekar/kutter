@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(32, 31, 28);
+}
+body {
+    color: antiquewhite;
+}
+
+#UrlField {
+    display: flexbox;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vh;
+    margin-top: 150px;
+    margin-left: 250px;
+    /* margin-right: 25%; */
+    align-items: center;
+    align-content: center;
+}
+
+ul.li {
+    text-decoration: none;
+    list-style: none;
+}
+/* #UrlField#FormField {
+    align-items: center;
+    align-content: center;
+    margin-top: 100px;
+} */
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    padding-right: 50px;
+    color: aliceblue;
+}
+
+.buttons.button {
+    display: flex;
+    padding: 5px;
+    color: aliceblue;
+    justify-content: left;
+}
+
+#span {
+    padding-left: 25px;
+}
+
+#kutted_url {
+    color: aqua;
+}

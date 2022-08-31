@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="buttons">
+
+    <button type="button" class="btn btn-dark pl-3">Login </button>
+    <span id="span"></span>
+    <button type="button" class="btn btn-dark">Signup</button>
+</div>
+
+<div id="UrlField">
+
+
+    <div class="container">
+        <h1> Kutter </h1>
+
+        <p id="paragraph" class="text-5">
+            The only Kutter you need for slicing your big fatal links which you are tired of managing and storing.
+        </p>
+
+
+    </div>
+
+    <div id="FormField" class="container">
+        <form method="POST" action="/">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="MainUrl">Your Url</label>
+                <input type="url" class="form-control" name="MainUrl" id="MainUrl" aria-describedby="MainUrl">
+            </div>
+
+            <div class="form-group">
+                <label for="KuttedUrl">Your Kutted Url</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">https://kuter.com/r/</span>
+                    </div>
+                    <input name="KuttedUrl" type="text" class="form-control" id="KuttedUrl" aria-describedby="basic-addon3">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+<div class="text-field pt-5"> 
+    {% if all_urls == "" %}
+    
+    {% else %}
+    <h3 id="kutted_url" class="text-success"> Here is your Custom Kutted Url <a class="text-success" href='http://127.0.0.1:8000/r/{{ all_urls }}'> http://127.0.0.1:8000/r/{{ all_urls }} </a> </h3>
+    
+    {% endif %}
+      </div>
+
+</div>
+
+
+
+{% endblock body %}

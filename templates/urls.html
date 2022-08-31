@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}    
+<div class="container pt-3">
+<ul> 
+        {% for i in all_urls %}
+        {{ i.redirect_to }}
+        <li> {{ i.url}}  <span> <a href="/r/{{i.redirect_to}}"> {{i.redirect_to}} </a> </span></li>
+    </ul>
+    {% endfor %}
+</div>
+
+
+    {% endblock body %}
